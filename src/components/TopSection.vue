@@ -6,7 +6,7 @@
         <p class="ma-0 pa-0">Hello, I am</p>
         <h1 class="header ma-0 pa-0">Colton Schollar</h1>
         <h2 class="secondary-text">
-          Full Stack Web <span class="dev_span">Developer</span>
+          A Full Stack Web <span class="dev_span">Developer</span> from Canada
         </h2>
       </section>
       <!-- m - applies margin, y - applies the spacing for both *-top and *-bottom thats why class of my-8 here -->

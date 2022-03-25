@@ -33,7 +33,7 @@ export default {
 
 #about {
   padding-left: 10%;
-  height: 100vh;
+  height: auto;
 
   h2 {
     font-weight: bold;

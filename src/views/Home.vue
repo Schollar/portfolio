@@ -3,6 +3,7 @@
     <navigation-section></navigation-section>
     <top-section></top-section>
     <about-section></about-section>
+    <skills-section></skills-section>
   </div>
 </template>
 
@@ -11,6 +12,7 @@
 import AboutSection from "../components/AboutSection.vue";
 import NavigationSection from "../components/NavigationSection.vue";
 import TopSection from "../components/TopSection.vue";
+import SkillsSection from "../components/SkillsSection.vue";
 
 export default {
   name: "Home",
@@ -18,6 +20,7 @@ export default {
     AboutSection,
     NavigationSection,
     TopSection,
+    SkillsSection,
   },
 };
 </script>
