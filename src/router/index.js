@@ -19,9 +19,17 @@ const routes = [
   //   component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   // }
 ]
-
+// From vue docs, using router with div ID's, creating a smooth scrolling effect to move around the  page
 const router = new VueRouter({
-  routes
+  routes,
+  scrollBehavior: function (to) {
+    if (to.hash) {
+      return {
+        selector: to.hash,
+        behavior: 'smooth'
+      }
+    }
+  },
 })
 
 export default router

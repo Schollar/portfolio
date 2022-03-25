@@ -10,7 +10,9 @@
       <span></span>
       <!-- Using a list to display navigation links, also on click we close the menu -->
       <ul class="nav_menu">
-        <router-link to="/"><li @click="close()">Home</li></router-link>
+        <router-link :to="{ name: 'Home', hash: '#home' }"
+          ><li @click="close()">Home</li></router-link
+        >
         <router-link to="/#about"><li @click="close()">About</li></router-link>
         <router-link to="/#portfolio"
           ><li @click="close()">Portfolio</li></router-link

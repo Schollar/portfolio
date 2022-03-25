@@ -31,8 +31,9 @@ export default {
   place-items: center;
 }
 
-.about {
+#about {
   padding-left: 10%;
+  height: 100vh;
 
   h2 {
     font-weight: bold;
