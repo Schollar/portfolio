@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: "services",
+  name: "skills-section",
 };
 </script>
 
