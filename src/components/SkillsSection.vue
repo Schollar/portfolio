@@ -50,14 +50,33 @@ h2 {
 .skill_names {
   display: grid;
   grid-auto-flow: column;
+  font-size: medium;
   place-self: center;
+
+  p {
+    margin-left: 25px;
+    padding: 0;
+    font-size: 0.75em;
+    font-weight: bolder;
+    color: purple;
+  }
   p:hover {
     color: gray;
-    font-size: 3em;
+    font-size: 1em;
     font-weight: medium;
   }
 }
 #skills {
   height: auto;
+}
+@media screen and (min-width: 600px) {
+  .skill_names {
+    p {
+      font-size: 2em;
+    }
+    p:hover {
+      font-size: 3em;
+    }
+  }
 }
 </style>

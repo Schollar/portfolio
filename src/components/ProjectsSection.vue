@@ -59,11 +59,13 @@ export default {
 };
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 #projects {
   margin: auto;
   padding: 5%;
   text-align: center;
+  display: grid;
+  place-items: center;
 }
 .v-card {
   border: 1px solid black;
@@ -71,8 +73,6 @@ export default {
 }
 
 .project {
-  width: 30vw;
-  min-width: 25rem;
   height: auto;
   margin: 2%;
   margin-left: 12px;
@@ -91,7 +91,12 @@ h2 {
   display: grid;
   margin-top: 5%;
   text-align: left;
-  margin-bottom: 2.5%;
+  margin-bottom: 5%;
+
+  > a {
+    font-size: small;
+    margin-bottom: 10px;
+  }
 }
 .live_link {
   text-align: left;
@@ -107,5 +112,13 @@ h2 {
   transform: scale(1.1);
   transition: 0.3s ease-in-out;
   position: absolute;
+}
+
+@media screen and (min-width: 600px) {
+  .code_links {
+    a {
+      font-size: medium;
+    }
+  }
 }
 </style>

@@ -14,8 +14,8 @@
           ><li @click="close()">Home</li></router-link
         >
         <router-link to="/#about"><li @click="close()">About</li></router-link>
-        <router-link to="/#portfolio"
-          ><li @click="close()">Portfolio</li></router-link
+        <router-link to="/#projects"
+          ><li @click="close()">Projects</li></router-link
         >
         <router-link to="/#contact"
           ><li @click="close()">Contact</li></router-link
