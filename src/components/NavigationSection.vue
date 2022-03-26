@@ -43,8 +43,8 @@ export default {
 .hamburger {
   display: block;
   position: relative;
-  top: 50px;
-  left: 50px;
+  top: 35px;
+  left: 25px;
   z-index: 1;
   user-select: none;
   a {
