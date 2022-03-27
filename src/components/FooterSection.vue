@@ -1,0 +1,68 @@
+<template>
+  <v-footer id="footer">
+    <section class="footer">
+      <section class="icons">
+        <v-btn href="https://www.github.com/schollar" target="_blank">
+          <v-icon> mdi-github</v-icon>
+        </v-btn>
+        <v-btn href="https://www.linkedin.com/in/cschollar/" target="_blank">
+          <v-icon> mdi-linkedin</v-icon>
+        </v-btn>
+      </section>
+      <p class="copyright">
+        Colton Schollar
+        <v-icon class="copyright_icon" size="18px"> mdi-copyright </v-icon
+        >{{ year }}
+      </p>
+    </section>
+  </v-footer>
+</template>
+<script>
+export default {
+  name: "footer-section",
+  computed: {
+    year() {
+      var day = new Date();
+      return day.getFullYear();
+    },
+  },
+};
+</script>
+<style lang="scss" scoped>
+#footer {
+  background-color: #343434;
+  display: grid;
+  width: 100vw;
+  margin-top: 2%;
+}
+.footer {
+  display: grid;
+  grid-auto-flow: column;
+
+  .icons {
+    height: auto;
+    position: relative;
+    text-align: center;
+    vertical-align: bottom;
+    bottom: 0;
+  }
+}
+.v-btn {
+  bottom: 0;
+  margin-top: 1.5%;
+  margin-left: 2%;
+}
+
+.copyright {
+  margin-top: 5px;
+  font-size: 16px;
+  color: #f15152;
+  font-weight: bold;
+  align-self: start;
+  margin-top: 25px;
+  margin-bottom: 0 !important;
+}
+.copyright_icon {
+  color: #f15152;
+}
+</style>

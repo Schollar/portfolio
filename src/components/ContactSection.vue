@@ -1,56 +1,57 @@
 <template>
   <section id="contact">
-    <section class="text_container">
-      <h2>
-        Contact
-        <v-icon> mdi-arrow-right </v-icon>
-      </h2>
-      <h2>Me</h2>
-      <p>
-        If you have any questions, or are looking to get a quote done for you or
-        your business, please send me a small message and I will get back to you
-        ASAP
-      </p>
+    <section class="container">
+      <section class="text_container">
+        <h2>
+          Contact
+          <v-icon> mdi-arrow-right </v-icon>
+        </h2>
+        <h2>Me</h2>
+        <p>
+          If you have any questions, or are looking to get a quote done for you
+          or your business, please send me a small message and I will get back
+          to you ASAP
+        </p>
+      </section>
+      <form ref="form" class="form" @submit.prevent="sendEmail">
+        <v-text-field
+          :rules="nameRules"
+          v-model="name"
+          name="name"
+          class="text-field my-8"
+          placeholder="name"
+          outlined
+        >
+        </v-text-field>
+        <v-text-field
+          :rules="emailRules"
+          v-model="email"
+          name="email"
+          class="text-field my-8"
+          placeholder="email"
+          outlined
+        >
+        </v-text-field>
+        <v-textarea
+          :rules="messageRules"
+          name="message"
+          v-model="message"
+          background-color="#d3d3d3"
+          placeholder="message"
+          outlined
+        ></v-textarea>
+        <v-btn
+          outlined
+          medium
+          @click="sendEmail()"
+          :loading="loading"
+          class="montserrat btn"
+          color="#778DA9"
+        >
+          Submit
+        </v-btn>
+      </form>
     </section>
-    <form ref="form" class="form" @submit.prevent="sendEmail">
-      <v-text-field
-        :rules="nameRules"
-        v-model="name"
-        name="name"
-        class="text-field my-8"
-        placeholder="name"
-        outlined
-      >
-      </v-text-field>
-      <v-text-field
-        :rules="emailRules"
-        v-model="email"
-        name="email"
-        class="text-field my-8"
-        placeholder="email"
-        outlined
-      >
-      </v-text-field>
-      <v-textarea
-        :rules="messageRules"
-        name="message"
-        v-model="message"
-        background-color="#d3d3d3"
-        class="my-8"
-        placeholder="message"
-        outlined
-      ></v-textarea>
-      <v-btn
-        outlined
-        medium
-        @click="sendEmail()"
-        :loading="loading"
-        class="montserrat btn"
-        color="primary"
-      >
-        Submit
-      </v-btn>
-    </form>
   </section>
 </template>
 
@@ -79,7 +80,7 @@ export default {
           "contact_service",
           "contact_form",
           this.$refs["form"],
-          "DVlO9CMDD-mJLBo1x",
+          `${process.env.EMAILJS}`,
           {
             name: this.name,
             email: this.email,
@@ -100,10 +101,10 @@ export default {
 
 <style scoped lang="scss">
 #contact {
-  margin-top: 35%;
+  margin-top: 40%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  background-color: darkgray;
+  background-color: #343434;
+  grid-gap: 25px;
 }
 
 .text_container {
@@ -111,19 +112,31 @@ export default {
   margin-left: 15%;
   h2 {
     font-size: 4em;
+    color: #f15152;
   }
   .mdi-arrow-right {
     font-size: 1.7em;
+    color: #778da9;
   }
 
   p {
     width: 95%;
     font-weight: bold;
     font-size: 1.5em;
+    color: #f4d8cd;
   }
+}
+.container {
+  display: grid;
+  place-self: center;
+  width: 80%;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-bottom: 5%;
+  column-gap: 5%;
 }
 
 .form {
+  place-self: end;
   .text-field {
     height: 55px;
     background-color: #d3d3d3;
@@ -134,9 +147,18 @@ export default {
     border-width: 3px;
   }
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 700px) {
+  #contact {
+    margin-top: 10%;
+  }
+}
+@media screen and (min-width: 915px) {
   #contact {
     margin-top: 0;
+  }
+  .form {
+    place-self: center;
+    width: 80%;
   }
 }
 </style>

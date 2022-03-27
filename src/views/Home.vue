@@ -6,6 +6,7 @@
     <skills-section></skills-section>
     <projects-section></projects-section>
     <contact-section></contact-section>
+    <footer-section></footer-section>
   </div>
 </template>
 
@@ -17,6 +18,7 @@ import TopSection from "../components/TopSection.vue";
 import SkillsSection from "../components/SkillsSection.vue";
 import ProjectsSection from "../components/ProjectsSection.vue";
 import ContactSection from "../components/ContactSection.vue";
+import FooterSection from "../components/FooterSection.vue";
 
 export default {
   name: "Home",
@@ -27,6 +29,13 @@ export default {
     SkillsSection,
     ProjectsSection,
     ContactSection,
+    FooterSection,
   },
 };
 </script>
+
+<style>
+#home {
+  background-color: #343434;
+}
+</style>

@@ -9,7 +9,7 @@
         dark
         round
       >
-        <v-card-title>{{ project.name }}</v-card-title>
+        <v-card-title class="card_title">{{ project.name }}</v-card-title>
 
         <v-img :src="project.img_src" />
         <section class="live_link">
@@ -62,7 +62,7 @@ export default {
 <style lang="scss" scoped>
 #projects {
   margin: auto;
-  padding: 5%;
+  padding-top: 5%;
   text-align: center;
   display: grid;
   place-items: center;
@@ -70,6 +70,9 @@ export default {
 .v-card {
   border: 1px solid black;
   height: 15%;
+}
+.card_title {
+  color: #f15152;
 }
 
 .project {
@@ -80,13 +83,14 @@ export default {
 }
 .card_container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 5%;
 }
 
 h2 {
-  color: white;
+  color: #f15152;
 }
+
 .code_links {
   display: grid;
   margin-top: 5%;
@@ -94,14 +98,21 @@ h2 {
   margin-bottom: 5%;
 
   > a {
-    font-size: small;
+    font-size: smaller;
     margin-bottom: 10px;
+    color: #778da9;
+    text-decoration: none;
+    width: 85%;
   }
 }
 .live_link {
   text-align: left;
   margin-top: 5%;
   margin-left: 5%;
+  > a {
+    color: #778da9;
+    text-decoration: none;
+  }
 }
 .v-image:hover {
   width: 95%;
@@ -114,10 +125,11 @@ h2 {
   position: absolute;
 }
 
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
   .code_links {
     a {
       font-size: medium;
+      width: 75%;
     }
   }
 }

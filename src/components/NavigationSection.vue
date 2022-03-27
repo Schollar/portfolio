@@ -49,7 +49,7 @@ export default {
   user-select: none;
   a {
     text-decoration: none;
-    color: brown;
+    color: #f15152;
   }
   a:hover {
     color: purple;
@@ -77,7 +77,7 @@ export default {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: purple;
+  background: #f15152;
   border-radius: 3px;
   z-index: 1;
   transform-origin: 4px 0px;

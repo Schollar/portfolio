@@ -40,11 +40,10 @@ export default {
   grid-template-rows: 1fr 2fr 2fr 2fr;
 }
 h2 {
-  color: purple;
+  color: #f15152;
   padding-top: 15px;
   font-weight: bold;
   place-self: center;
-  margin-right: 30%;
 }
 
 .skill_names {
@@ -58,16 +57,22 @@ h2 {
     padding: 0;
     font-size: 0.75em;
     font-weight: bolder;
-    color: purple;
+    color: #f15152;
   }
   p:hover {
-    color: gray;
+    color: #778da9;
     font-size: 1em;
     font-weight: medium;
   }
 }
+.web_server {
+  margin-right: 3%;
+}
 #skills {
   height: auto;
+  background-color: white;
+  padding-top: 5%;
+  padding-bottom: 2.5%;
 }
 @media screen and (min-width: 600px) {
   .skill_names {
@@ -77,6 +82,9 @@ h2 {
     p:hover {
       font-size: 3em;
     }
+  }
+  h2 {
+    margin-right: 30%;
   }
 }
 </style>
