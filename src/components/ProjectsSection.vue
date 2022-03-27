@@ -61,11 +61,11 @@ export default {
 
 <style lang="scss" scoped>
 #projects {
-  margin: auto;
   padding-top: 5%;
   text-align: center;
   display: grid;
   place-items: center;
+  margin-bottom: 10%;
 }
 .v-card {
   border: 1px solid black;
@@ -102,7 +102,7 @@ h2 {
     margin-bottom: 10px;
     color: #778da9;
     text-decoration: none;
-    width: 85%;
+    width: 75%;
   }
 }
 .live_link {

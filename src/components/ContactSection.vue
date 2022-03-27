@@ -7,10 +7,12 @@
           <v-icon> mdi-arrow-right </v-icon>
         </h2>
         <h2>Me</h2>
+        <p>Text or Call at:</p>
+        <p>(825)345-4205</p>
         <p>
           If you have any questions, or are looking to get a quote done for you
-          or your business, please send me a small message and I will get back
-          to you ASAP
+          or your business, please send me a message and I will get back to you
+          ASAP.
         </p>
       </section>
       <form ref="form" class="form" @submit.prevent="sendEmail">
@@ -136,7 +138,6 @@ export default {
 }
 
 .form {
-  place-self: end;
   .text-field {
     height: 55px;
     background-color: #d3d3d3;
