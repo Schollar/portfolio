@@ -17,7 +17,6 @@
       </section>
       <form ref="form" class="form" @submit.prevent="sendEmail">
         <v-text-field
-          :rules="nameRules"
           v-model="name"
           name="name"
           class="text-field my-8"
@@ -69,20 +68,23 @@ export default {
       email: "",
       emailRules: [
         (v) => !!v || "E-mail is required",
-        (v) => /.+@.+/.test(v) || "E-mail must be valid",
+        (v) => /.+@.+\..+/.test(v) || "E-mail must be valid",
       ],
       message: "",
       messageRules: [(v) => !!v || "Message cant be empty"],
     };
   },
   methods: {
+    reset() {
+      this.$refs.form.reset();
+    },
     sendEmail() {
       try {
         emailjs.sendForm(
           "contact_service",
           "contact_form",
           this.$refs["form"],
-          `${process.env.EMAILJS}`,
+          "DVlO9CMDD-mJLBo1x",
           {
             name: this.name,
             email: this.email,
@@ -93,9 +95,7 @@ export default {
         console.log(error);
       }
       // Reset form field
-      this.name = "";
-      this.email = "";
-      this.message = "";
+      this.reset();
     },
   },
 };
