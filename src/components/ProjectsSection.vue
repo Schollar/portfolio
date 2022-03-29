@@ -2,6 +2,7 @@
   <section id="projects">
     <h2 class="">My Projects:</h2>
     <section class="card_container">
+      <!-- Loop through projects object and display project info onto page -->
       <v-card
         v-for="project in projects"
         :key="project.name"
@@ -20,6 +21,9 @@
             <a :href="project.url" target="_blank">{{ project.frontend }}</a>
             <a :href="project.url" target="_blank">{{ project.backend }}</a>
           </section>
+          <section class="description">
+            <p>{{ project.desc }}</p>
+          </section>
         </section>
       </v-card>
     </section>
@@ -31,6 +35,7 @@ export default {
   name: "projects-section",
   data() {
     return {
+      // Setup projects in an object of objects to loop over and display info onto page.
       projects: {
         opp: {
           name: "Okotoks Pizza",
@@ -38,6 +43,7 @@ export default {
           frontend: "https://github.com/Schollar/Okotoks_Pizza",
           backend: undefined,
           img_src: "/opp.png",
+          desc: "Static Pizza Restraunt Website made with just HTML and CSS. OPP Website is mobile and desktop responsive. Deployed to Oracle Cloud server using Apache",
         },
         tweeter: {
           name: "Tweeter",
@@ -45,6 +51,7 @@ export default {
           backend: "https://github.com/Schollar/tweeter_backend",
           frontend: "https://github.com/Schollar/tweeter",
           img_src: "/tweeter.png",
+          desc: "Goal of this project was to build a twitter clone. The focus was functionality over design, so the main features of the app are the core showcase.Tweeter is mobile to desktop responsive. Front end built using VueJs. Backend is built with Python, Flask and MariaDB. Deployed to Oracle Cloud Sever using Apache and PM2.",
         },
         arktracker: {
           name: "Ark Tracker",
@@ -52,6 +59,7 @@ export default {
           backend: "https://github.com/Schollar/arktracker_backend",
           frontend: "https://github.com/Schollar/arktracker_frontend",
           img_src: "/arktracker.png",
+          desc: "The goal of this project was to build a web app to help track daily/weekly tasks within the game of Lost Ark. Users sign up, then can create one or more characters that they would like to track tasks of. This app is mobile to desktop responsive. It was built with VueJs and the help of vuetify for the frontend. Python, flask and MariaDB are the backbone for the backend. Deployed to Oracle Cloud server using apache and PM2",
         },
       },
     };
@@ -74,7 +82,13 @@ export default {
 .card_title {
   color: #f15152;
 }
-
+.description {
+  display: grid;
+  color: #f4d8cd;
+  margin-bottom: 2.5%;
+  width: 90%;
+  text-align: center;
+}
 .project {
   height: auto;
   margin: 2%;

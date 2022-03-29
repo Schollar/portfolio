@@ -62,6 +62,7 @@ export default {
   name: "contact-section",
   data() {
     return {
+      // Setting up variables, and rules for form inputs, found off vuetify docs
       loading: false,
       name: "",
       nameRules: [(v) => !!v || "Name is required"],
@@ -75,9 +76,11 @@ export default {
     };
   },
   methods: {
+    // Function that resets the form.
     reset() {
       this.$refs.form.reset();
     },
+    // Following EmailJs docs, we send the form content as an object, also send the name and service of my form on the emailJs website, aswell as my userId and the ref to the form
     sendEmail() {
       try {
         emailjs.sendForm(
@@ -103,7 +106,7 @@ export default {
 
 <style scoped lang="scss">
 #contact {
-  margin-top: 40%;
+  margin-top: 55%;
   display: grid;
   background-color: #343434;
   grid-gap: 25px;

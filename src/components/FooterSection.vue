@@ -21,6 +21,7 @@
 export default {
   name: "footer-section",
   computed: {
+    // Function that gets the year, found from vuetify docs
     year() {
       var day = new Date();
       return day.getFullYear();

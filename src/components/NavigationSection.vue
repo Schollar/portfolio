@@ -30,6 +30,7 @@ export default {
   name: "navigation-section",
   components: {},
   methods: {
+    // Function that unchecks checkbox to hide menu when user navigates somewhere
     close() {
       var checkbox = this.$refs.checkbox;
       checkbox.checked = false;
