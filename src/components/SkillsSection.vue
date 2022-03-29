@@ -61,8 +61,9 @@ h2 {
   }
   p:hover {
     color: #778da9;
-    font-size: 1em;
-    font-weight: medium;
+    transform-origin: center;
+    transform: scale(1.2);
+    cursor: default;
   }
 }
 .web_server {

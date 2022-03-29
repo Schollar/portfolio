@@ -106,15 +106,14 @@ export default {
 
 <style scoped lang="scss">
 #contact {
-  margin-top: 55%;
   display: grid;
   background-color: #343434;
-  grid-gap: 25px;
+  gap: 25px;
 }
 
 .text_container {
   align-self: center;
-  margin-left: 15%;
+
   h2 {
     font-size: 4em;
     color: #f15152;
@@ -132,6 +131,7 @@ export default {
   }
 }
 .container {
+  margin-top: 5%;
   display: grid;
   place-self: center;
   width: 80%;
