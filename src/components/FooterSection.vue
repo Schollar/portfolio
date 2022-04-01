@@ -2,12 +2,36 @@
   <v-footer id="footer">
     <section class="footer">
       <section class="icons">
-        <v-btn href="https://www.github.com/schollar" target="_blank">
-          <v-icon> mdi-github</v-icon>
-        </v-btn>
-        <v-btn href="https://www.linkedin.com/in/cschollar/" target="_blank">
-          <v-icon> mdi-linkedin</v-icon>
-        </v-btn>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn href="https://www.github.com/schollar" target="_blank">
+              <v-icon icon v-bind="attrs" v-on="on"> mdi-github</v-icon>
+            </v-btn>
+          </template>
+          <span>My Github</span>
+        </v-tooltip>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              href="https://www.linkedin.com/in/cschollar/"
+              target="_blank"
+            >
+              <v-icon icon v-bind="attrs" v-on="on"> mdi-linkedin</v-icon>
+            </v-btn>
+          </template>
+          <span>My LinkedIn</span>
+        </v-tooltip>
+        <v-tooltip top>
+          <template v-slot:activator="{ on, attrs }">
+            <v-btn
+              href="https://docs.google.com/document/d/1rEEV6BsOTXPNnC_yyeofdYr7UJk9X1JsqF_btKGkAlc/edit?usp=sharing"
+              target="_blank"
+            >
+              <v-icon icon v-bind="attrs" v-on="on"> mdi-file</v-icon>
+            </v-btn>
+          </template>
+          <span>My Resume</span>
+        </v-tooltip>
       </section>
       <p class="copyright">
         Colton Schollar
