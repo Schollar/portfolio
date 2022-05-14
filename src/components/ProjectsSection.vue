@@ -63,6 +63,14 @@ export default {
           img_src: "/opp.png",
           desc: "Static Pizza Restraunt Website made with just HTML and CSS. OPP Website is mobile and desktop responsive.<br><br>Deployed to Oracle Cloud server using Apache",
         },
+        jstrucking: {
+          name: "J & S Transport",
+          url: "https://jandshouston.com",
+          frontend: "https://github.com/Schollar/jandstransport",
+          backend: undefined,
+          img_src: "/jandshouston.png",
+          desc: "Transport company website based out of Houston TX. Vue frontend project used along with vuetify made to clients needs and wants.  Website is mobile and desktop responsive <br><br>Deployed to Oracle Cloud server using Apache",
+        },
       },
     };
   },
@@ -138,7 +146,7 @@ h2 {
   height: 200px;
 }
 
-.project_image:hover {
+.project:hover {
   transform: scale(1.2);
   transition: 0.3s ease-in-out;
 }
