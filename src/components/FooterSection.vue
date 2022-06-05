@@ -24,7 +24,7 @@
         <v-tooltip top>
           <template v-slot:activator="{ on, attrs }">
             <v-btn
-              href="https://docs.google.com/document/d/1rEEV6BsOTXPNnC_yyeofdYr7UJk9X1JsqF_btKGkAlc/edit?usp=sharing"
+              href="https://drive.google.com/file/d/1ZS5bF10NL5S5lurgZ9zZWxUINVSFZ_q8/view?usp=sharing"
               target="_blank"
             >
               <v-icon icon v-bind="attrs" v-on="on"> mdi-file</v-icon>

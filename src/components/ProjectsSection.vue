@@ -71,6 +71,14 @@ export default {
           img_src: "/jandshouston.png",
           desc: "Transport company website based out of Houston TX. Vue frontend project used along with vuetify made to clients needs and wants.  Website is mobile and desktop responsive <br><br>Deployed to Oracle Cloud server using Apache",
         },
+        coinprice: {
+          name: "Coin Price",
+          url: "https://www.coinprice.ml",
+          frontend: "https://github.com/Schollar/crypto_converter",
+          backend: undefined,
+          img_src: "/coinprice.png",
+          desc: "Coin Price is a app that users can pick from a list of popular crypto coins and display the price in different currencies. Coin price is both mobile and desktop responsive.<br><br>Deployed to Oracle Cloud server using Apache",
+        },
       },
     };
   },
@@ -88,7 +96,7 @@ export default {
 .card_container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   gap: 20px;
 }
 
@@ -130,6 +138,12 @@ h2 {
     text-decoration: none;
   }
 }
+.card_title {
+  font-size: 2em;
+  margin-bottom: 2%;
+  display: grid;
+  place-items: center;
+}
 .live_link {
   text-align: left;
   margin-top: 5%;
@@ -147,7 +161,7 @@ h2 {
 }
 
 .project:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   transition: 0.3s ease-in-out;
 }
 
